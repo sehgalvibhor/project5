@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 SELECT
 country_region_code,		
 country_region,		
