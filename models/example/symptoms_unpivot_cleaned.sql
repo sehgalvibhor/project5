@@ -11,4 +11,4 @@ date,
 symptom,		
 value
 FROM
-  `data-engg-313621.temp.symptoms_unpivot`
+  {{ ref('symptoms_unpivot') }}
