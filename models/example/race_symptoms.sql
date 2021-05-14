@@ -1,6 +1,6 @@
 {{ config(materialized='table') }}
 
-SELECT state, sub_region_2, case_month, race_cases, symptom, sym_weight  FROM
+SELECT state, sub_region_2, case_month, race, race_cases, symptom, sym_weight  FROM
 (SELECT state, location, race, AVG(value) race_cases, SUBSTRING(CAST(date AS string), 0, 7) case_month
 FROM {{ ref('cases_unpivot') }} cases
 GROUP BY case_month, state, location, race) AS temp1
