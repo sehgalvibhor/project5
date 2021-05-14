@@ -13,3 +13,4 @@ date,
 symptom,		
 value
 FROM {{ ref('symptoms_unpivot') }}
+
