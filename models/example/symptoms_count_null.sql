@@ -430,4 +430,4 @@ sum( case when symptom_Xerostomia is null then 1 else 0 end) symptom_Xerostomia,
 sum( case when symptom_Yawn is null then 1 else 0 end) symptom_Yawn,
 sum( case when symptom_hyperhidrosis is null then 1 else 0 end) symptom_hyperhidrosis,
 sum( case when symptom_pancreatitis is null then 1 else 0 end) symptom_pancreatitis
-FROM `bigquery-public-data.covid19_symptom_search.symptom_search_sub_region_2_weekly`;
+FROM `bigquery-public-data.covid19_symptom_search.symptom_search_sub_region_2_weekly`
