@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 SELECT
 country_region_code,		
 country_region,		
@@ -10,5 +12,4 @@ place_id,
 date,		
 symptom,		
 value
-FROM
-  `data-engg-313621.temp.symptoms_unpivot`
+FROM {{ ref('symptoms_unpivot') }}
