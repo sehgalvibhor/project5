@@ -100,7 +100,7 @@ models:
           description: "COVID symptom Hypertension"
 
     - name: race_symptom_mask_uasge
-        description: "Merged the top_covid_symptoms_by_race data with county-wise mask usage data"
+        description: "Merged the top_covid_symptoms_by_race data with county wise mask usage data"
         columns:
           - name: state
             description: "State"
