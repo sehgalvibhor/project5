@@ -5,7 +5,7 @@
 }}
 
 SELECT *
-FROM `bigquery-public-data.covid19_tracking.city_level_cases_and_deaths` 
+FROM {{ source('cov_track', 'city_level_cases_and_deaths') }}
 
 {% if is_incremental() %}
 

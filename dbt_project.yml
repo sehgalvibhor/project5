@@ -36,3 +36,27 @@ models:
       # Applies to all files under models/example/
       example:
           materialized: view
+
+sources:
+  - name: cov_sym
+    database: bigquery-public-data
+    schema: covid19_symptom_search
+    tables:
+      - name: symptom_search_sub_region_2_weekly
+
+  - name: cov_track
+      database: bigquery-public-data
+      schema: covid19_tracking
+      tables:
+        - name: city_level_cases_and_deaths
+
+  - name: cov_mask
+      database: bigquery-public-data
+      schema: covid19_nyt
+      tables:
+        - name: mask_use_by_county
+
+
+{{ source('cov_sym', 'symptom_search_sub_region_2_weekly') }}
+{{ source('cov_track', 'city_level_cases_and_deaths') }}
+{{ source('cov_mask', 'mask_use_by_county') }}
