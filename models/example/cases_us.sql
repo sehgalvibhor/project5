@@ -5,8 +5,7 @@
 }}
 
 SELECT *
-FROM `bigquery-public-data.covid19_tracking.city_level_cases_and_deaths`
-WHERE city_or_county = 'County'
+FROM `bigquery-public-data.covid19_tracking.city_level_cases_and_deaths` 
 
 {% if is_incremental() %}
 
@@ -14,3 +13,5 @@ WHERE city_or_county = 'County'
   where date <= (SELECT CURRENT_DATE AS today)
 
 {% endif %}
+
+AND city_or_county = 'County'

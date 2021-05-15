@@ -12,4 +12,4 @@ pivot (
 'symptom_Skin_rash' symptom_Skin_rash, 
 'symptom_Common_cold' symptom_Common_cold, 
 'symptom_Hypertension' symptom_Hypertension)
-);
+)
