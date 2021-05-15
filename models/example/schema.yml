@@ -79,25 +79,25 @@ models:
         - name: race
             description: "Race"
         - name: symptom_Pain
-            description: "COVID symptom - Pain"
+            description: "COVID symptom Pain"
         - name: symptom_Infection
-            description: "COVID symptom - Infection"
+            description: "COVID symptom Infection"
         - name: symptom_Allergy
-            description: "COVID symptom - Allergy"
+            description: "COVID symptom Allergy"
         - name: symptom_Acne
-            description: "COVID symptom - Acne"
+            description: "COVID symptom Acne"
         - name: symptom_Anxiety
-            description: "COVID symptom - Anxiety"
+            description: "COVID symptom Anxiety"
         - name: symptom_Diabetes
-            description: "COVID symptom - Diabetes"
+            description: "COVID symptom Diabetes"
         - name: symptom_Itch
-            description: "COVID symptom - Itch"
+            description: "COVID symptom Itch"
         - name: symptom_Skin_rash
-            description: "COVID symptom - Skin_rash"
+            description: "COVID symptom  Skin_rash"
         - name: symptom_Common_cold
-            description: "COVID symptom - Common_cold"
+            description: "COVID symptom Common_cold"
         - name: symptom_Hypertension
-            description: "COVID symptom - Hypertension"
+            description: "COVID symptom Hypertension"
 
     - name: race_symptom_mask_uasge
         description: "Merged the top_covid_symptoms_by_race data with county-wise mask usage data"
