@@ -4,6 +4,31 @@ version: 2
 models:
     - name: cases_us
       description: "COVID cases in the US by race"
+      columns:
+        - name: date
+          description: "Date of the data"
+        - name: state
+          description: "State"
+        - name: location
+          description: "County"
+        - name: city_or_county
+          description: "Whether it is a city or county"
+        - name: cases_total
+          description: "Total COVID cases"
+        - name: cases_white
+          description: "Total WHITE COVID cases"
+        - name: cases_black
+          description: "Total BLACK COVID cases"
+        - name: cases_latinx
+          description: "Total LATINX COVID cases" 
+        - name: cases_asian
+          description: "Total ASIAN COVID cases"
+        - name: cases_aian
+          description: "Total AIAN COVID cases"
+        - name: cases_hnpi
+          description: "Total HNPI COVID cases"
+        - name: cases_multiracial
+          description: "Total MULTIRACIAL COVID cases"
 
     - name: symptoms_us
       description: "COVID symptom prominence by counties in the US"
@@ -22,6 +47,16 @@ models:
 
     - name: county_code_mapping
       description: "County code and name mapping for US"
+      columns:
+        - name: county_code
+          description: "FIPS code of the county"
+          tests:
+            - unique
+            - not_null
+        - name: state
+          description: "State the county belongs to"
+        - name: county
+          description: "County Name"
 
     - name: race_symptoms
       description: "Race and COVID symptoms joined and aggregated at a county and month level"
