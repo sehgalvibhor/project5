@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
 SELECT map.state, map.county, month, race, first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, never, rarely, sometimes, frequently, always
 FROM {{ ref('top_covid_symptoms_by_race') }} covid, {{ ref('county_code_mapping') }} map,

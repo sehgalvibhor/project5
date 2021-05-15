@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
 select location,state,date, 'cases_white' race, cases_white value
 from {{ ref('cases_us') }}

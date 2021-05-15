@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
 SELECT  sum( case when country_region_code is null then 1 else 0 end) country_region_code,
 sum( case when country_region is null then 1 else 0 end) country_region,

@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
 SELECT max(sub_region_2_code) AS county_code, sub_region_1 AS state, sub_region_2 AS county
 FROM {{ ref('symptoms_unpivot_cleaned') }}

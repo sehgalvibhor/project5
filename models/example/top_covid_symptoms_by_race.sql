@@ -1,5 +1,5 @@
 
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
 SELECT * from {{ ref('top_race_symptoms') }}
 pivot ( 

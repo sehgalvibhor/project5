@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
 select country_region_code, country_region, sub_region_1, sub_region_1_code, sub_region_2, sub_region_2_code, place_id, date, 'symptom_Pain' symptom , symptom_Pain value
 from {{ ref('symptoms_us') }}

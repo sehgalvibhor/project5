@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
 SELECT state, sub_region_2 AS county, case_month AS month , race, race_cases, symptom, sym_weight  FROM
 (SELECT state, location, race, AVG(value) race_cases, SUBSTRING(CAST(date AS string), 0, 7) case_month

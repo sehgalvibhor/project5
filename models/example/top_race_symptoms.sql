@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
 SELECT *
 FROM (SELECT month, state, county, race, symptom, RANK() OVER(PARTITION BY month, state, county,race ORDER BY sym_weight DESC) AS rank
