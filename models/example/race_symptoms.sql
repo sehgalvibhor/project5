@@ -12,4 +12,4 @@ WHERE value > 0
 GROUP BY sym_month, sub_region_1_code, sub_region_2, symptom) AS temp2
 ON sym_month = case_month
 AND temp2.sub_region_2 = temp1.location
-AND temp2.sub_region_1_code = temp1.state;
+AND temp2.sub_region_1_code = temp1.state
