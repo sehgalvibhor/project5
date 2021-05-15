@@ -9,34 +9,34 @@ models:
       description: "COVID symptom prominence by counties in the US"
 
     - name: cases_unpivot
-        description: "Unpivoted COVID cases in US - Decomposed race columns as rows"
+      description: "Unpivoted COVID cases in US - Decomposed race columns as rows"
 
     - name: symptoms_unpivot
-        description: "Unpivoted COVID symptoms in US - Decomposed top 10 symptom columns as rows"
+      description: "Unpivoted COVID symptoms in US - Decomposed top 10 symptom columns as rows"
 
     - name: symptoms_count_null
-        description: "Count of null values for each symptom mentioned in symptoms_us"
+      description: "Count of null values for each symptom mentioned in symptoms_us"
 
     - name: symptoms_unpivot_cleaned
-        description: "symptoms_unpivot aggregated at a month-year level"
+      description: "symptoms_unpivot aggregated at a month-year level"
 
     - name: county_code_mapping
-          description: "County code and name mapping for US"
+      description: "County code and name mapping for US"
 
     - name: race_symptoms
-          description: "Race and COVID symptoms joined and aggregated at a county and month level"
+      description: "Race and COVID symptoms joined and aggregated at a county and month level"
 
     - name: top_race_symptoms
-        description: "Ranked symptoms by race for at a county and month level"
+      description: "Ranked symptoms by race for at a county and month level"
 
     - name: top_covid_symptoms_by_race
-        description: "Transformed top_race_symptoms to populate the top symptoms against each race in the order of their prominence"
+      description: "Transformed top_race_symptoms to populate the top symptoms against each race in the order of their prominence"
 
     - name: covid_symptoms_by_rank_and_race
       description: "Transformed top_race_symptoms to create columns for each symptom with rank"
 
     - name: race_symptom_mask_uasge
-        description: "Merged the top_covid_symptoms_by_race data with county-wise mask usage data"
+      description: "Merged the top_covid_symptoms_by_race data with county-wise mask usage data"
 
 
 
