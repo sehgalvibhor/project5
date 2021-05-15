@@ -1,6 +1,25 @@
 
 version: 2
 
+sources:
+  - name: cov_sym
+    database: bigquery-public-data
+    schema: covid19_symptom_search
+    tables:
+      - name: symptom_search_sub_region_2_weekly
+
+  - name: cov_track
+    database: bigquery-public-data
+    schema: covid19_tracking
+    tables:
+      - name: city_level_cases_and_deaths
+
+  - name: cov_mask
+    database: bigquery-public-data
+    schema: covid19_nyt
+    tables:
+      - name: mask_use_by_county
+      
 models:
     - name: cases_us
       description: "COVID cases in the US by race"
